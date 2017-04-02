@@ -1,4 +1,10 @@
 <!doctype html>
+<style>
+	h6{
+		font-size: 24px !important;
+		text-transform: lowercase !important;
+	}
+</style> 
 <html>
 	<head>
 		<meta charset="utf-8">
@@ -24,8 +30,115 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
+				<section data-markdown>
+					<script type="text/template">
+						Vegaroo helps calculate environmental impact. 
+					</script>
+				</section>
+				<section data-background="Earth.jpg">
+					<h3>Climate Change Threatens our Planet</h3><br>
+					<br><br><br><br><br>
+
+					<h3>But we can still make a difference</h3>
+				</section>
+				<section>Greenhouse Gasses are directly linked to a warming planet.<br>
+					<image class="stretch" src="co2.gif"></video>
+				</section>
+
+				<section>
+					 <h3>While C02 output from the energy industry is set to slow down, the effects of animal agriculture will be picking up.</h3>
+					<canvas class="stretch" data-chart="line">
+						Energy, 20, 24
+						<!-- This is a comment that will be ignored -->
+						Animal Agriculture, 20, 36
+						<!-- 
+						{ 
+						 "data" : {
+						  "labels" : ["2017", "2040"],
+						  "datasets" : [{ "borderColor": "#0f0"}, { "borderColor": "#0ff" } ]
+						 }
+						}
+						-->
+					</canvas>
+				</section>
+				<section>	
+					What's the biggest way to reduce my carbon impact?<br>
+					Consumption of animal products
+					<canvas data-chart="bar" data-chart-src="data.csv">
+						<!-- 
+						{
+						"xAxis":{"domain":[-10,10]},
+						"yAxis":{"domain":[-5,5]},
+						"data" : {
+						"datasets" : [{ "backgroundColor": "#0f0" }, { "backgroundColor": "#0ff" } ]
+  						"yAxis": {"domain": ["0", "2"]},
+						}
+						-->
+					</canvas>
+				</section>
+				<section>	
+					But it's not just Carbon<br>
+					Production of Animal foods require vast amounts of natural resources to produce 
+					<canvas data-chart="bar" data-chart-src="datawater.csv">
+						<!-- 
+						{
+						"xAxis":{"domain":[-10,10]},
+						"yAxis":{"domain":[-5,5]},
+						"data" : {
+						"datasets" : [{ "backgroundColor": "#0f0" }, { "backgroundColor": "#0ff" } ]
+  						"yAxis": {"domain": ["0", "2"]},
+						}
+						-->
+					</canvas>
+					Foregoing 1 kilogram of beef would save as much water as not showering for 3 months
+				</section>
+				<section>	
+					But it's not just Carbon...<br>
+					Production of Animal foods require vast amounts of natural resources to produce 
+					<canvas data-chart="pie" data-chart-src="datawater.csv">
+						<!-- 
+						{
+						"xAxis":{"domain":[-10,10]},
+						"yAxis":{"domain":[-5,5]},
+						"data" : {
+						"datasets" : [{ "backgroundColor": "#0f0" }, { "backgroundColor": "#0ff" } ]
+  						"yAxis": {"domain": ["0", "2"]},
+						}
+						-->
+					</canvas>
+					Foregoing 1 kilogram of beef would save as much water as not showering for 3 months
+				</section>
+				<section>	
+					But it's not just Carbon<br>
+					Production of Animal foods require vast amounts of natural resources to produce 
+					<canvas data-chart="pie" data-chart-src="datawater.csv">
+						<!-- 
+						{
+						"xAxis":{"domain":[-10,10]},
+						"yAxis":{"domain":[-5,5]},
+						"data" : {
+						"datasets" : [{ "backgroundColor": "#0f0" }, { "backgroundColor": "#0ff" } ]
+  						"yAxis": {"domain": ["0", "2"]},
+						}
+						-->
+					</canvas>
+					Foregoing 1 kilogram of beef would save as much water as not showering for 3 months
+				</section>
+				<section data-background="#ff0000">
+					<h2>All CSS color formats are supported, like rgba() or hsl().</h2>
+				</section>
+				<section data-background="Deadzone.jpg">
+					<h2>This slide will have a full-size background image.</h2>
+				</section>
+
 				<section>Slide 2</section>
+				<section data-markdown>
+					<script type="text/template">
+						## Page title
+
+						A paragraph with some text and a
+					</script>
+				</section>
 			</div>
 		</div>
 
@@ -36,14 +149,37 @@
 			// More info https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
 				history: true,
-
+				  chart: {
+					  defaults: { 
+					  	  defaults: {width:400, height: 600, grid:true},
+						  global: { 
+							  title: { fontColor: "#FFF" }, 
+						  }, 
+							legend: {
+								labels: { fontColor: "#FFF" },
+							},
+							scale: { 
+								scaleLabel: { fontColor: "#FFF" }, 
+								gridLines: { color: "#FFF", zeroLineColor: "#FFF" }, 
+								ticks: { fontColor: "#FFF" }, 
+							} 
+						},
+						line: { borderColor: [ "rgba(20,220,220,.8)" , "rgba(220,120,120,.8)", "rgba(20,120,220,.8)" ], "borderDash": [ [5,10], [0,0] ]}, 
+						bar: { backgroundColor: [ "rgba(20,220,220,.8)" , "rgba(220,120,120,.8)", "rgba(20,120,220,.8)" ]}, 
+						pie: { backgroundColor: [ ["rgba(0,0,0,.8)" , "rgba(220,20,20,.8)", "rgba(20,220,20,.8)", "rgba(220,220,20,.8)", "rgba(20,20,220,.8)"] ]},
+						radar: { borderColor: [ "rgba(20,220,220,.8)" , "rgba(220,120,120,.8)", "rgba(20,120,220,.8)" ]}, 
+					},
 				// More info https://github.com/hakimel/reveal.js#dependencies
 				dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/chart/Chart.min.js' },				
+					{ src: 'plugin/chart/csv2chart.js' },
 					{ src: 'plugin/notes/notes.js', async: true },
 					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
 				]
+
+
 			});
 		</script>
 	</body>
