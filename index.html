@@ -4,6 +4,19 @@
 		font-size: 24px !important;
 		text-transform: lowercase !important;
 	}
+	.left { position: absolute; left: 0; top: 0; width: 50%; }
+	.right { position: absolute; right: 0; top: 0; width: 50%; }
+
+	.chart-custom {
+		width: 320px !important;
+    	height: 300px !important;
+	}
+
+	.underneath-text {
+		font-size: 18px !important;
+		font-style: italic !important; 
+	}
+	
 </style> 
 <html>
 	<head>
@@ -13,7 +26,7 @@
 		<title>reveal.js</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="css/theme/white.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -30,114 +43,83 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section data-markdown>
-					<script type="text/template">
-						Vegaroo helps calculate environmental impact. 
-					</script>
+				<section data-background="EarthTempMovie.mp4" data-transition="convex">
+					<div style="margin-bottom:50%"><h1>Vegaroo</h1>
+					<br>
+					Calculating Environmental Impact
+					</div>
 				</section>
-				<section data-background="Earth.jpg">
-					<h3>Climate Change Threatens our Planet</h3><br>
+				<section data-background="Earth.jpg" style="color:white" data-transition="convex">
+					Climate Change Threatens our Planet<br>
 					<br><br><br><br><br>
-
-					<h3>But we can still make a difference</h3>
+					But we can still make a difference
 				</section>
-				<section>Greenhouse Gasses are directly linked to a warming planet.<br>
-					<image class="stretch" src="co2.gif"></video>
+				<section data-background="#fff" data-transition="convex">Greenhouse Gasses like Carbon Dioxide are directly linked to a warming planet<br>
+					<image class="stretch" src="co2.gif"></image>
 				</section>
-
+				<section data-transition="convex">	
+					Reducing the use of animal products is the easiest and most effective way to reduce our carbon footprint 
+					<canvas data-chart="bar" data-chart-src="datacarbon.csv" class="chart-custom">
+						<!-- 
+						{
+						""
+						"data" : {
+						"datasets" : [{ "backgroundColor": "#000" }, { "backgroundColor": "#000" } ]
+						}
+						-->
+					</canvas>
+				</section>
+				<section data-transition="convex">	
+					Animal Agriculture is responsible for
+					91% of the Amazon Rainforest's Destruction
+					<canvas data-chart="pie" data-chart-src="dataforest.csv">
+						<!-- 
+						{
+						"xAxis":{"domain":[-10,10]},
+						"yAxis":{"domain":[-5,5]},
+						"data" : {
+						"datasets" : [{ "backgroundColor": "#0f0" }, { "backgroundColor": "#0ff" } ]
+						}
+						-->
+					</canvas><br>
+					<div class="fragment fade-down">More than 1 acre is destroyed every second
+					</div>
+				</section>
+				<section data-transition="convex">	
+					Animal products require vast amounts of natural resources
+					<canvas data-chart="bar" data-chart-src="datawater.csv" class="chart-custom">
+						<!-- 
+						{
+						"xAxis":{"domain":[-10,10]},
+						"yAxis":{"domain":[-5,5]},
+						"data" : {
+						"datasets" : [{ "backgroundColor": "#0f0" }, { "backgroundColor": "#0ff" } ]
+  						"yAxis": {"domain": ["0", "2"]},
+						}
+						-->
+					</canvas>
+					<div class="underneath-text">Foregoing 1 kilogram of beef would save as much water as not showering for 4 months</div>
+				</section>
+				<section data-transition="convex">
+					<div style="margin-bottom:20%">
+							<h3>The Big Food Equation</h3><br><br>
+							<div class="fragment fade-down">
+						24,000,000 in Campaign Contributions 
+						<br>	
+					</div>
+					<div class="fragment fade-down">
+						+ <br> 30,000,000 spent by Lobbysits <br>
+						</div>
+						<div class="fragment fade-down">
+						= <br> 38,000,000,000 in Government Subsidies to support the Meat and Dairy Indsutries
+						</div>
+					</div>
+				</section>
 				<section>
-					 <h3>While C02 output from the energy industry is set to slow down, the effects of animal agriculture will be picking up.</h3>
-					<canvas class="stretch" data-chart="line">
-						Energy, 20, 24
-						<!-- This is a comment that will be ignored -->
-						Animal Agriculture, 20, 36
-						<!-- 
-						{ 
-						 "data" : {
-						  "labels" : ["2017", "2040"],
-						  "datasets" : [{ "borderColor": "#0f0"}, { "borderColor": "#0ff" } ]
-						 }
-						}
-						-->
-					</canvas>
-				</section>
-				<section>	
-					What's the biggest way to reduce my carbon impact?<br>
-					Consumption of animal products
-					<canvas data-chart="bar" data-chart-src="data.csv">
-						<!-- 
-						{
-						"xAxis":{"domain":[-10,10]},
-						"yAxis":{"domain":[-5,5]},
-						"data" : {
-						"datasets" : [{ "backgroundColor": "#0f0" }, { "backgroundColor": "#0ff" } ]
-  						"yAxis": {"domain": ["0", "2"]},
-						}
-						-->
-					</canvas>
-				</section>
-				<section>	
-					But it's not just Carbon<br>
-					Production of Animal foods require vast amounts of natural resources to produce 
-					<canvas data-chart="bar" data-chart-src="datawater.csv">
-						<!-- 
-						{
-						"xAxis":{"domain":[-10,10]},
-						"yAxis":{"domain":[-5,5]},
-						"data" : {
-						"datasets" : [{ "backgroundColor": "#0f0" }, { "backgroundColor": "#0ff" } ]
-  						"yAxis": {"domain": ["0", "2"]},
-						}
-						-->
-					</canvas>
-					Foregoing 1 kilogram of beef would save as much water as not showering for 3 months
-				</section>
-				<section>	
-					But it's not just Carbon...<br>
-					Production of Animal foods require vast amounts of natural resources to produce 
-					<canvas data-chart="pie" data-chart-src="datawater.csv">
-						<!-- 
-						{
-						"xAxis":{"domain":[-10,10]},
-						"yAxis":{"domain":[-5,5]},
-						"data" : {
-						"datasets" : [{ "backgroundColor": "#0f0" }, { "backgroundColor": "#0ff" } ]
-  						"yAxis": {"domain": ["0", "2"]},
-						}
-						-->
-					</canvas>
-					Foregoing 1 kilogram of beef would save as much water as not showering for 3 months
-				</section>
-				<section>	
-					But it's not just Carbon<br>
-					Production of Animal foods require vast amounts of natural resources to produce 
-					<canvas data-chart="pie" data-chart-src="datawater.csv">
-						<!-- 
-						{
-						"xAxis":{"domain":[-10,10]},
-						"yAxis":{"domain":[-5,5]},
-						"data" : {
-						"datasets" : [{ "backgroundColor": "#0f0" }, { "backgroundColor": "#0ff" } ]
-  						"yAxis": {"domain": ["0", "2"]},
-						}
-						-->
-					</canvas>
-					Foregoing 1 kilogram of beef would save as much water as not showering for 3 months
-				</section>
-				<section data-background="#ff0000">
-					<h2>All CSS color formats are supported, like rgba() or hsl().</h2>
-				</section>
-				<section data-background="Deadzone.jpg">
-					<h2>This slide will have a full-size background image.</h2>
-				</section>
-
-				<section>Slide 2</section>
-				<section data-markdown>
-					<script type="text/template">
-						## Page title
-
-						A paragraph with some text and a
-					</script>
+					<div style="margin-bottom:50%">
+					Vegaroo helps by calculating your current environmental impact and recommending ways to improve. <br><br>
+					Ready to get started?
+				</div>
 				</section>
 			</div>
 		</div>
@@ -148,25 +130,26 @@
 		<script>
 			// More info https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
+				width: 320,
+				height: 600,
 				history: true,
 				  chart: {
 					  defaults: { 
-					  	  defaults: {width:400, height: 600, grid:true},
 						  global: { 
-							  title: { fontColor: "#FFF" }, 
+							  title: { fontColor: "#000" }, 
 						  }, 
 							legend: {
-								labels: { fontColor: "#FFF" },
+								labels: { fontColor: "#000" },
 							},
 							scale: { 
-								scaleLabel: { fontColor: "#FFF" }, 
-								gridLines: { color: "#FFF", zeroLineColor: "#FFF" }, 
-								ticks: { fontColor: "#FFF" }, 
+								scaleLabel: { fontColor: "#000" }, 
+								gridLines: { color: "#000", zeroLineColor: "#000" }, 
+								ticks: { fontColor: "#000" }, 
 							} 
 						},
 						line: { borderColor: [ "rgba(20,220,220,.8)" , "rgba(220,120,120,.8)", "rgba(20,120,220,.8)" ], "borderDash": [ [5,10], [0,0] ]}, 
-						bar: { backgroundColor: [ "rgba(20,220,220,.8)" , "rgba(220,120,120,.8)", "rgba(20,120,220,.8)" ]}, 
-						pie: { backgroundColor: [ ["rgba(0,0,0,.8)" , "rgba(220,20,20,.8)", "rgba(20,220,20,.8)", "rgba(220,220,20,.8)", "rgba(20,20,220,.8)"] ]},
+						bar: { backgroundColor: [ "#0066CD" , "#000", "#00ff00" ]}, 
+						pie: { backgroundColor: [ ["#228B22" , "#000", "rgba(20,220,20,.8)", "rgba(220,220,20,.8)", "rgba(20,20,220,.8)"] ]},
 						radar: { borderColor: [ "rgba(20,220,220,.8)" , "rgba(220,120,120,.8)", "rgba(20,120,220,.8)" ]}, 
 					},
 				// More info https://github.com/hakimel/reveal.js#dependencies
