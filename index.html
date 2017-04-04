@@ -18,7 +18,7 @@
 	}
 
 	.underneath-text {
-		font-size: 18px !important;
+		font-size: 16px !important;
 		font-style: italic !important; 
 	}
 	.top {
@@ -63,79 +63,75 @@
 					</div>
 				</section>
 				<section data-background="Earth.jpg" style="color:white" data-transition="convex">
-					Climate Change Threatens our Planet<br>
+					<div style="font-size:28px">Climate Change Threatens our Planet<br>
 					<br><br><br><br><br>
 					But every human can still make a difference
+				</div>
 				</section>
-				<section data-background="#fff" data-transition="convex">Greenhouse Gasses like Carbon Dioxide are directly linked to a warming planet<br>
+				<section data-background="#fff" data-transition="convex">
+					<div style="margin-bottom:20%">Greenhouse Gasses like Carbon Dioxide (CO2) are directly linked to a warming planet
+					</div>
 					<image class="stretch" src="co2.gif"></image>
+
 				</section>
 				<section data-transition="convex">	
 					<div class="top">
 						What's the biggest way to reduce my carbon footprint?
 						<br>
-						<div class="fragment fade-down" style="font-size: 14px !important;">
-							In gigatons of C02
-							<br>
- 							<div class="left">
-								<ul style="list-style: none;">
-									<li>Hybrid Car</li>
-									<li>Not Eating Beef</li>
-									<li>Solar Panels</li>
-									<li>Eating Vegetarian</li>
-									<li>Eating Vegan</li>
-								</ul>
-							</div>
-							<div class="right">
-								<ul style="list-style: none;">
-									<li>1.0</li>
-									<li>1.4</li>
-									<li>1.4</li>
-									<li>1.6</li>
-									<li>1.8</li>
-								</ul>
-							</div>
-						</div>	
-					</div>		
-					<div class="fragment fade-down" style="font-size: 14px !important;" style="position: absolute; bottom: 0;">
-							<br>
-							Reducing the consumption of animal products!
-						</div>	
-				</section>
-				<section data-transition="convex">	
-					But it's not just Greenhouse Gasses....<br>
-					Animal Products require vast amounts of natural resources and is the leading cause of ecosystem destruction.
-				</section>
-				<section data-transition="convex">
-					Animal Agriculture is responsible for 91% of the Amazon Rainforest's Destruction
-					<canvas data-chart="pie" data-chart-src="dataforest.csv" class="chart-custom-pie">
-						<!-- 
-						{
-						"xAxis":{"domain":[-10,10]},
-						"yAxis":{"domain":[-5,5]},
-						"data" : {
-						"datasets" : [{ "backgroundColor": "#0f0" }, { "backgroundColor": "#0ff" } ]
-						}
-						-->
-					</canvas><br>
-					<div class="fragment fade-down">More than 20 football stadiums worth of rainforest are destroyed every minute<br>
-					</div>
-					<div class="fragment fade-down">Trees both trap Carbon Dioxide and create Oxygen, doubling the impact of their destruction.
-						<img data-src="tree.jpeg">
-					</div>
-				</section>
-				<section data-transition="convex">	
-					7 million pounds of waste every minute in the U.S.<br>
-					<div class="fragment fade-down">+<br>
-					Nitrogen-based fertilizers<br>
-					=
-					</div>
-					<div class="fragment fade-down">
-						A 13,000 Square KM deadzone in the Gulf of Mexico<br>
-						<img data-src="Deadzone.jpg">
-					</div>
-				</section>
+						<br>
+						<div class="fragment fade-down">
+						Reducing the consumption of animal products!
 
+							<div style="font-size: 20px !important;">
+								
+								<br>
+								<span class="underneath-text">Yearly positive impact in gigatons of C02</span>
+								<br>
+								<br>
+	 							<div class="left">
+									<ul style="list-style: none;">
+										<li>Hybrid Car</li>
+										<li>Not Eating Beef</li>
+										<li>Solar Panels</li>
+										<li>Vegetarian</li>
+										<li>Vegan</li>
+									</ul>
+								</div>
+								<div class="right">
+									<ul style="list-style: none;">
+										<li>1.0</li>
+										<li>1.4</li>
+										<li>1.4</li>
+										<li>1.6</li>
+										<li>1.8</li>
+									</ul>
+								</div>
+							</div>	
+						</div>
+					</div>	
+				</section>
+				<section data-transition="convex">	
+					<div style="margin-bottom:50%">But it's not just Greenhouse Gasses.br><br>
+						<div class="fragment fade-down">
+						Animal Products require vast amounts of<br>
+						<ul style="list-style: none;">
+							<li>Water</li>
+							<li>Land</li>
+							<li>Grain</li>
+						</ul>
+						</div>
+						<br>
+						<div class="fragment fade-down">
+							...and are the leading cause of<br>
+							<ul style="list-style: none;">
+								<li>Species Extinction</li>
+								<li>Habitat Destruction</li>
+								<li>Ocean Dead Zones</li>
+								<li>Water Pollution</li>
+							</ul>
+						</div>
+					</div>
+				</section>
 				<section data-transition="convex">	
 					Small servings of meat and dairy require huge amounts of fresh water
 					<canvas data-chart="bar" data-chart-src="datawater.csv" class="chart-custom">
@@ -150,6 +146,37 @@
 						-->
 					</canvas>
 					<div class="underneath-text fragment fade-down">Foregoing 1 kilogram of beef would save as much water as not showering for 4 months</div>
+				</section>
+				<section data-transition="convex">
+					<div style="font-size:14px;">
+					Animal Agriculture is responsible for 91% of the Amazon Rainforest's Destruction
+					<canvas data-chart="pie" data-chart-src="dataforest.csv" class="chart-custom-pie">
+						<!-- 
+						{
+						"xAxis":{"domain":[-10,10]},
+						"yAxis":{"domain":[-5,5]},
+						"data" : {
+						"datasets" : [{ "backgroundColor": "#0f0" }, { "backgroundColor": "#0ff" } ]
+						}
+						-->
+					</canvas><br>
+					<!-- <div class="fragment fade-down">More than 20 football stadiums worth of rainforest are destroyed every minute<br>
+					</div> -->
+					<div class="fragment fade-down">Trees capture CO2 and create Oxygen, doubling the negative impact of their destruction.
+						<img data-src="tree.png">
+					</div>
+				</div>
+				</section>
+				<section data-transition="convex">	
+					Animals raised for consumption produce 7 million pounds of waste every minute in the U.S.<br>
+					<div class="fragment fade-down">+<br>
+					their feed utilizes nitrogen-based fertilizers<br>
+					=
+					</div>
+					<div class="fragment fade-down">
+						A 13,000 Square KM deadzone in the Gulf of Mexico where fish cannot survive<br>
+						<img data-src="Deadzone.jpg">
+					</div>
 				</section>
 				<section>
 					<div style="margin-bottom:50%">
