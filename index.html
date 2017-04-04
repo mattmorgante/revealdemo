@@ -4,17 +4,30 @@
 		font-size: 24px !important;
 		text-transform: lowercase !important;
 	}
-	.left { position: absolute; left: 0; top: 0; width: 50%; }
-	.right { position: absolute; right: 0; top: 0; width: 50%; }
+	.left { position: absolute; left: 0; width: 50%; }
+	.right { position: absolute; right: 0; width: 50%; }
 
 	.chart-custom {
 		width: 320px !important;
     	height: 300px !important;
 	}
 
+	.chart-custom-pie {
+		width: 320px !important;
+    	height: 200px !important;
+	}
+
 	.underneath-text {
 		font-size: 18px !important;
 		font-style: italic !important; 
+	}
+	.top {
+	  position: fixed;
+	  top: 0;
+	  left: 0;
+	  z-index: 999;
+	  width: 100%;
+	  height: 23px;
 	}
 	
 </style> 
@@ -52,27 +65,50 @@
 				<section data-background="Earth.jpg" style="color:white" data-transition="convex">
 					Climate Change Threatens our Planet<br>
 					<br><br><br><br><br>
-					But we can still make a difference
+					But every human can still make a difference
 				</section>
 				<section data-background="#fff" data-transition="convex">Greenhouse Gasses like Carbon Dioxide are directly linked to a warming planet<br>
 					<image class="stretch" src="co2.gif"></image>
 				</section>
 				<section data-transition="convex">	
-					Reducing the use of animal products is the easiest and most effective way to reduce our carbon footprint 
-					<canvas data-chart="bar" data-chart-src="datacarbon.csv" class="chart-custom">
-						<!-- 
-						{
-						""
-						"data" : {
-						"datasets" : [{ "backgroundColor": "#000" }, { "backgroundColor": "#000" } ]
-						}
-						-->
-					</canvas>
+					<div class="top">
+						What's the biggest way to reduce my carbon footprint?
+						<br>
+						<div class="fragment fade-down" style="font-size: 14px !important;">
+							In gigatons of C02
+							<br>
+ 							<div class="left">
+								<ul style="list-style: none;">
+									<li>Hybrid Car</li>
+									<li>Not Eating Beef</li>
+									<li>Solar Panels</li>
+									<li>Eating Vegetarian</li>
+									<li>Eating Vegan</li>
+								</ul>
+							</div>
+							<div class="right">
+								<ul style="list-style: none;">
+									<li>1.0</li>
+									<li>1.4</li>
+									<li>1.4</li>
+									<li>1.6</li>
+									<li>1.8</li>
+								</ul>
+							</div>
+						</div>	
+					</div>		
+					<div class="fragment fade-down" style="font-size: 14px !important;" style="position: absolute; bottom: 0;">
+							<br>
+							Reducing the consumption of animal products!
+						</div>	
 				</section>
 				<section data-transition="convex">	
-					Animal Agriculture is responsible for
-					91% of the Amazon Rainforest's Destruction
-					<canvas data-chart="pie" data-chart-src="dataforest.csv">
+					But it's not just Greenhouse Gasses....<br>
+					Animal Products require vast amounts of natural resources and is the leading cause of ecosystem destruction.
+				</section>
+				<section data-transition="convex">
+					Animal Agriculture is responsible for 91% of the Amazon Rainforest's Destruction
+					<canvas data-chart="pie" data-chart-src="dataforest.csv" class="chart-custom-pie">
 						<!-- 
 						{
 						"xAxis":{"domain":[-10,10]},
@@ -82,11 +118,26 @@
 						}
 						-->
 					</canvas><br>
-					<div class="fragment fade-down">More than 1 acre is destroyed every second
+					<div class="fragment fade-down">More than 20 football stadiums worth of rainforest are destroyed every minute<br>
+					</div>
+					<div class="fragment fade-down">Trees both trap Carbon Dioxide and create Oxygen, doubling the impact of their destruction.
+						<img data-src="tree.jpeg">
 					</div>
 				</section>
 				<section data-transition="convex">	
-					Animal products require vast amounts of natural resources
+					7 million pounds of waste every minute in the U.S.<br>
+					<div class="fragment fade-down">+<br>
+					Nitrogen-based fertilizers<br>
+					=
+					</div>
+					<div class="fragment fade-down">
+						A 13,000 Square KM deadzone in the Gulf of Mexico<br>
+						<img data-src="Deadzone.jpg">
+					</div>
+				</section>
+
+				<section data-transition="convex">	
+					Small servings of meat and dairy require huge amounts of fresh water
 					<canvas data-chart="bar" data-chart-src="datawater.csv" class="chart-custom">
 						<!-- 
 						{
@@ -98,28 +149,13 @@
 						}
 						-->
 					</canvas>
-					<div class="underneath-text">Foregoing 1 kilogram of beef would save as much water as not showering for 4 months</div>
-				</section>
-				<section data-transition="convex">
-					<div style="margin-bottom:20%">
-							<h3>The Big Food Equation</h3><br><br>
-							<div class="fragment fade-down">
-						24,000,000 in Campaign Contributions 
-						<br>	
-					</div>
-					<div class="fragment fade-down">
-						+ <br> 30,000,000 spent by Lobbysits <br>
-						</div>
-						<div class="fragment fade-down">
-						= <br> 38,000,000,000 in Government Subsidies to support the Meat and Dairy Indsutries
-						</div>
-					</div>
+					<div class="underneath-text fragment fade-down">Foregoing 1 kilogram of beef would save as much water as not showering for 4 months</div>
 				</section>
 				<section>
 					<div style="margin-bottom:50%">
-					Vegaroo helps by calculating your current environmental impact and recommending ways to improve. <br><br>
-					Ready to get started?
-				</div>
+						Vegaroo calculates the environmental impact of your food choices and makes it easier to eat a more eco-conscious diet. <br><br>
+						Ready to get started?
+					</div>
 				</section>
 			</div>
 		</div>
